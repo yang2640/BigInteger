@@ -11,6 +11,7 @@ using namespace std;
 class BInt {
 public:
     BInt(string num, bool negative);
+    BInt(string num);
     ~BInt();
 
     // overloading for +
@@ -24,13 +25,13 @@ public:
     BInt operator*(const BInt &b);
     
     // overloading for <<
-    ostream &operator<<(ostream &os, const BInt &num);
+    ostream& operator<<(ostream &os);
 
 private:
     // inner sub and add without negative
     string innerSub(string a, string b);
     string innerAdd(string a, string b);
-
+    string innerMul(string a, string b);
 
     // use strings to represent the two big numbers
     string num;
