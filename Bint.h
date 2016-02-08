@@ -25,7 +25,7 @@ public:
     BInt operator*(const BInt &b);
     
     // overloading for <<
-    ostream& operator<<(ostream &os);
+    friend ostream& operator<<(ostream &os, const BInt& b);
 
 private:
     // inner sub and add without negative
